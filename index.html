@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>bChuya — Professional Profile</title>
+  <meta name="description" content="Professional profile of bChuya — developer, designer, and problem solver." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">bChuya</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="avatar" src="https://avatars.dicebear.com/api/initials/bChuya.svg" alt="bChuya avatar">
+        <div class="hero-content">
+          <h2>Hi — I'm bChuya</h2>
+          <p class="lead">A results-driven developer building clean, accessible, and user-first web experiences. I specialize in front-end development, modern JavaScript frameworks, and building maintainable UI systems.</p>
+          <p class="ctas">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn" href="/resume.pdf">Download resume</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About me</h3>
+      <p>I design and build web applications with a focus on performance, accessibility, and strong developer experience. I enjoy collaborating on open-source projects, learning new technologies, and mentoring junior developers.</p>
+      <ul>
+        <li>Location: (Your City)</li>
+        <li>Availability: Open to opportunities</li>
+        <li>Contact: <a href="mailto:you@example.com">you@example.com</a></li>
+      </ul>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h3>Skills</h3>
+      <div class="skill-grid">
+        <div class="skill">HTML &amp; CSS</div>
+        <div class="skill">JavaScript / TypeScript</div>
+        <div class="skill">React / Next.js</div>
+        <div class="skill">Node.js &amp; APIs</div>
+        <div class="skill">Accessibility (a11y)</div>
+        <div class="skill">Testing &amp; CI</div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h3>Selected projects</h3>
+      <div class="project-list">
+        <article class="project">
+          <h4>Project One</h4>
+          <p>Short description of a project — what it does and the impact. Link to the repo or live demo.</p>
+          <p><a href="#">View repository</a> · <a href="#">Live demo</a></p>
+        </article>
+
+        <article class="project">
+          <h4>Project Two</h4>
+          <p>Short description of a project — technologies used and outcomes.</p>
+          <p><a href="#">View repository</a> · <a href="#">Live demo</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <p>If you'd like to work together or say hello, send a message or email me directly.</p>
+      <form id="contact-form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn primary">Send</button>
+        <p id="form-status" aria-live="polite"></p>
+      </form>
+
+      <p class="socials">Connect: <a href="https://github.com/bChuya">GitHub</a> · <a href="https://www.linkedin.com/">LinkedIn</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> bChuya — Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
