@@ -1,168 +1,457 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>bChuya — Professional Profile</title>
-  <meta name="description" content="Professional profile of bChuya — developer, designer, and problem solver." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="site-title">bChuya</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#interests">Interests</a>
-        <a href="#resume">Resume</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+:root {
+  --bg: #120d1f;
+  --bg-soft: #1a1230;
+  --panel: rgba(31, 23, 46, 0.78);
+  --panel-strong: #241934;
+  --panel-alt: #2c1e46;
+  --primary: #a855f7;
+  --primary-strong: #8b5cf6;
+  --primary-soft: #d8b4fe;
+  --secondary: #f472b6;
+  --text: #f5eefc;
+  --muted: #d7c9ef;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 22px 60px rgba(17, 9, 29, 0.35);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/326206821?v=4" alt="bChuya avatar">
-        <div class="hero-content">
-          <h2>Hi — I'm bChuya!</h2>
-          <p class="lead">A results-driven developer building clean, accessible, and user-first web experiences. I specialize in front-end development, modern JavaScript frameworks, and building meaningful digital experiences.</p>
-          <p class="ctas">
-            <a class="btn primary" href="#projects">See my work</a>
-            <a class="btn" href="https://docs.google.com/document/d/1GGYMW_ty0uXWfdMdjKt35Ks4y8QEb7l0/edit" target="_blank" rel="noopener noreferrer">View resume</a>
-          </p>
-        </div>
-      </div>
-    </section>
+* {
+  box-sizing: border-box;
+}
 
-    <section id="about" class="container about">
-      <h3>About me</h3>
-      <p>I design and build web applications with a focus on performance, accessibility, and strong developer experience. I enjoy collaborating on open-source projects, learning new technologies, and finding creative ways to solve real-world challenges.</p>
-      <ul>
-        <li>Location: 24 Copeces Lane East Hampton New York</li>
-        <li>Availability: Unemployed at Lehigh University 2030</li>
-        <li>Contact: <a href="mailto:chuyabryan26@gmail.com">chuyabryan26@gmail.com</a></li>
-      </ul>
-    </section>
+html {
+  scroll-behavior: smooth;
+}
 
-    <section id="interests" class="container interests">
-      <h3>Interests</h3>
-      <div class="interest-grid">
-        <div class="interest-item">CAD</div>
-        <div class="interest-item">3D Printing</div>
-        <div class="interest-item">Laser Cutting</div>
-        <div class="interest-item">Working with Raspberry Pi</div>
-      </div>
-    </section>
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(168, 85, 247, 0.25), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(244, 114, 182, 0.18), transparent 28%),
+    linear-gradient(135deg, #0f0a18 0%, #171126 36%, #120d1f 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    <section id="resume" class="container resume">
-      <h3>Resume</h3>
-      <p>My resume highlights my background, technical skills, and experience in design and development.</p>
-      <div class="resume-actions">
-        <a class="btn primary" href="https://docs.google.com/document/d/1GGYMW_ty0uXWfdMdjKt35Ks4y8QEb7l0/edit" target="_blank" rel="noopener noreferrer">Open resume</a>
-      </div>
-    </section>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    <section id="skills" class="container skills">
-      <h3>Skills</h3>
-      <div class="skill-grid">
-        <div class="skill">HTML &amp; CSS</div>
-        <div class="skill">JavaScript / TypeScript</div>
-        <div class="skill">React / Next.js</div>
-        <div class="skill">Node.js &amp; APIs</div>
-        <div class="skill">Accessibility (a11y)</div>
-        <div class="skill">Testing &amp; CI</div>
-      </div>
-    </section>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    <section id="projects" class="container projects">
-      <h3>Selected projects</h3>
-      <div class="project-list">
-        <article class="project project-featured">
-          <div class="project-header">
-            <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 19c-5 1.5-5-2.5-7-4m14 6v-3.87a3.375 3.375 0 0 0-.975-2.438A3.375 3.375 0 0 1 16.5 9c1.95 0 3.75 1.05 4.688 2.812.093.206.18.43.258.662"></path>
-            </svg>
-            <h4>FYRE-Assignments</h4>
-          </div>
-          <p>A comprehensive collection of assignments showcasing my coding skills and problem-solving approach across various programming concepts and challenges.</p>
-          <p class="project-meta">
-            <span class="badge">Portfolio</span>
-            <span class="badge">Coursework</span>
-          </p>
-          <p><a href="https://github.com/bChuya/FYRE-Assignments" target="_blank" rel="noopener noreferrer">View repository ↗</a></p>
-        </article>
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
 
-        <article class="project">
-          <h4>Project One</h4>
-          <p>Short description of a project — what it does and the impact. Link to the repo or live demo.</p>
-          <p><a href="#">View repository</a> · <a href="#">Live demo</a></p>
-        </article>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(16, 11, 24, 0.6);
+  border-bottom: 1px solid var(--border);
+}
 
-        <article class="project">
-          <h4>Project Two</h4>
-          <p>Short description of a project — technologies used and outcomes.</p>
-          <p><a href="#">View repository</a> · <a href="#">Live demo</a></p>
-        </article>
-      </div>
-    </section>
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-height: 78px;
+}
 
-    <section id="downloads" class="container downloads">
-      <h3>Reflection PDFs</h3>
-      <div class="download-list">
-        <a class="download-card" href="https://raw.githubusercontent.com/bChuya/FYRE-Assignments/main/Reflections/Materials%20Engineering%20Reflection%20-%20Bryan%20Chuya-1.pdf" target="_blank" rel="noopener noreferrer">
-          <div class="download-content">
-            <span class="download-title">Materials Engineering Reflection</span>
-            <span class="download-meta">Download PDF</span>
-          </div>
-        </a>
+.site-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  letter-spacing: -0.06em;
+}
 
-        <a class="download-card" href="https://raw.githubusercontent.com/bChuya/FYRE-Assignments/main/Reflections/MicroController%20Reflection%20-%20Bryan%20Chuya-1.pdf" target="_blank" rel="noopener noreferrer">
-          <div class="download-content">
-            <span class="download-title">MicroController Reflection</span>
-            <span class="download-meta">Download PDF</span>
-          </div>
-        </a>
-      </div>
-    </section>
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
 
-    <section id="contact" class="container contact">
-      <h3>Contact</h3>
-      <p>If you'd like to work together or say hello, send a message or email me directly.</p>
-      <form id="contact-form">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit" class="btn primary">Send</button>
-        <p id="form-status" aria-live="polite"></p>
-      </form>
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  transition: all 0.2s ease;
+}
 
-      <p class="socials">Connect: <a href="https://github.com/bChuya">GitHub</a> · <a href="https://www.linkedin.com/">LinkedIn</a></p>
-    </section>
+.nav a:hover,
+.nav a:focus-visible {
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--text);
+  outline: none;
+}
 
-  </main>
+main {
+  padding-bottom: 4rem;
+}
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> bChuya — Built with care.</p>
-    </div>
-  </footer>
+.hero {
+  padding: 4rem 0 2.5rem;
+}
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+.hero-inner {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 2vw, 2rem);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(36, 25, 52, 0.94), rgba(24, 18, 40, 0.8));
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.avatar {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(216, 180, 254, 0.8);
+  box-shadow: 0 16px 40px rgba(168, 85, 247, 0.35);
+}
+
+.hero-content h2 {
+  margin: 0 0 0.9rem;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.08em;
+}
+
+.lead {
+  margin: 0 0 1.5rem;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(216, 180, 254, 0.5);
+  box-shadow: 0 12px 22px rgba(168, 85, 247, 0.2);
+  outline: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(168, 85, 247, 0.25);
+}
+
+section.container {
+  margin-top: 2rem;
+  padding: 1.4rem 0;
+}
+
+section.container > h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  letter-spacing: -0.04em;
+}
+
+.about,
+.interests,
+.resume,
+.skills,
+.projects,
+.downloads,
+.contact {
+  background: rgba(22, 16, 31, 0.5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.6rem 1.45rem;
+  box-shadow: var(--shadow);
+}
+
+.about p,
+.resume p,
+.contact p {
+  color: var(--muted);
+}
+
+.about ul {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.about li + li {
+  margin-top: 0.45rem;
+}
+
+.interest-grid,
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+.interest-item,
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(216, 180, 254, 0.22);
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.12), rgba(168, 85, 247, 0.04));
+  color: var(--text);
+  text-align: center;
+  font-weight: 600;
+}
+
+.resume-actions {
+  margin-top: 1rem;
+}
+
+.project-list,
+.download-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.project {
+  padding: 1.2rem 1.2rem 1rem;
+  border: 1px solid rgba(216, 180, 254, 0.22);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(168,85,247,0.06));
+  border-radius: var(--radius-lg);
+}
+
+.project-featured {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(244, 114, 182, 0.08));
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--primary-soft);
+}
+
+.project h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.project p {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem !important;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(216, 180, 254, 0.12);
+  border: 1px solid rgba(216, 180, 254, 0.24);
+  font-size: 0.8rem;
+  color: var(--primary-soft);
+}
+
+.project a,
+.download-card,
+.socials a,
+.about a,
+.contact a {
+  color: var(--primary-soft);
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 88px;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(216, 180, 254, 0.2);
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.08), rgba(255,255,255,0.02));
+}
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.download-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.download-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+}
+
+label span {
+  color: var(--muted);
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(216, 180, 254, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(13, 10, 18, 0.72);
+  color: var(--text);
+  padding: 0.9rem 1rem;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(168, 85, 247, 0.5);
+  border-color: transparent;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 132px;
+}
+
+#form-status {
+  min-height: 1.4em;
+  margin: 0;
+  color: var(--primary-soft);
+}
+
+.socials {
+  margin-top: 1.25rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 2rem 0 3rem;
+}
+
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.9rem 0;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 auto;
+  }
+
+  .ctas {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    position: static;
+  }
+
+  .nav {
+    gap: 0.45rem;
+  }
+
+  .nav a {
+    padding-inline: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .about,
+  .interests,
+  .resume,
+  .skills,
+  .projects,
+  .downloads,
+  .contact {
+    padding: 1.2rem 1rem;
+  }
+}
